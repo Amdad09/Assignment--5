@@ -9,6 +9,13 @@
             rel="stylesheet"
             type="text/css" />
         <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+            .disable{
+                pointer-events: none;
+                opacity: .4;
+                color: white;
+            }
+        </style>
     </head>
     <body class="bg-[#f4f7ff] py-6">
         <header class="w-11/12 mx-auto bg-white p-6 mb-6 rounded-2xl">
@@ -233,7 +240,7 @@
                                 Activity Log
                             </h3>
                         </div>
-                        <button class="btn hover:bg-[#3752fd] hover:text-white text-[#3752fd] bg-transparent border-current font-medium mb-4">
+                        <button id="clear-history" class="btn hover:bg-[#3752fd] hover:text-white text-[#3752fd] bg-transparent border-current font-medium mb-4">
                                         Clear History
                                     </button>
                     </div>
