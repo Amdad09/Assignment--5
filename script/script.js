@@ -4,20 +4,34 @@ document.getElementById('clear-history').addEventListener('click', function () {
     historyTitle.innerHTML = '';
 });
 
-const date = new Date();
+function formatDate(date) {
+    const options = {
+        weekday: 'short',
+        day: '2-digit',
+        month: 'long',
+        year: 'numeric',
+    };
 
-const options = {
-    weekday: 'short',
-    day: '2-digit',
-    month: 'long',
-    year: 'numeric',
-};
-const formattedDate = date.toLocaleDateString('en-US', options);
+    let formatedDate = date.toLocaleDateString('en-US', options);
+
+    let dateParts = formatedDate.split(',');
+    if (dateParts.length > 1) {
+         dateParts[0] = `<span class='weekday-style'>${dateParts[0]}</span>`; 
+         formatedDate =
+             `${dateParts[0]} ,<br> ${dateParts[1]} ${dateParts[2]}`;
+    }
+    // console.log(formatedDate);
+
+    return formatedDate;
+}
+const date = new Date();
+const formatedDate = formatDate(date);
+
+console.log(formatedDate);
 
 const currentDate = document.getElementById('date');
-currentDate.innerHTML = formattedDate;
+currentDate.innerHTML = formatedDate;
 currentDate.classList.add('font-bold', 'text-[22px]');
-
 
 const cardButtons = document.querySelectorAll('.card-btn');
 let clickCount = 0;
@@ -28,7 +42,7 @@ for (let i = 0; i < cardButtons.length; i++) {
     button.addEventListener('click', function () {
         const cardId = button.id.replace('card-btn-', 'card-');
         const card = document.getElementById(cardId);
-        console.log('CardID: ', card);
+        // console.log(card);
 
         const taskElement = document.getElementById('task');
         const taskAddedElement = document.getElementById('added-task');

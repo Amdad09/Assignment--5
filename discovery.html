@@ -8,7 +8,7 @@
             href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css"
             rel="stylesheet"
             type="text/css" />
-        <link rel="stylesheet" href="popins-font.css">
+        <link rel="stylesheet" href="popins-font.css" />
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
     <body class="bg-[#f4f7ff] py-6">
@@ -39,14 +39,96 @@
                         element in the DOM?
                     </h3>
                     <div class="border-dashed border-b-2"></div>
-                    <p class="p-4 text-lg">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing
-                        elit. Provident amet voluptates error voluptatem rerum
-                        cumque iste nobis maxime, rem facilis at, omnis, non
-                        libero nam recusandae eum blanditiis tenetur ad!
-                    </p>
+                    <div class="p-4 text-lg">
+                        Ways to Select Elements in the DOM:
+                        <ol>
+                            <li>
+                                getElementById(): Selects an element by its
+                                unique ID.
+                            </li>
+                            <li>
+                                getElementsByClassName(): Selects elements by a
+                                specific class name. It is used to find multiple
+                                elements.
+                            </li>
+                            <li>
+                                getElementsByTagName(): Selects elements by a
+                                specific tag name.
+                            </li>
+                            <li>
+                                querySelector(): Selects the first matching
+                                element using a CSS selector. It only selects
+                                the first matching element.
+                            </li>
+                            <li>
+                                querySelectorAll(): Selects all matching
+                                elements using a CSS selector (returns a
+                                NodeList).
+                            </li>
+                        </ol>
+                    </div>
                 </div>
-                
+                <div class="bg-white rounded-xl">
+                    <h3 class="p-4 font-bold text-black text-xl">
+                        Question-2: What is the difference between innerHTML,
+                        innerText, and textContent ?
+                    </h3>
+                    <div class="border-dashed border-b-2"></div>
+                    <div class="p-4 text-lg">
+                        <p>
+                            InnerHTML returns the entire HTML content, including
+                            tags.
+                        </p>
+                        <p>
+                            InnerText only returns visible text (ignoring hidden
+                            elements).
+                        </p>
+                        <p>
+                            TextContent returns all text inside the element,
+                            including hidden content but without HTML tags.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl">
+                    <h3 class="p-4 font-bold text-black text-xl">
+                        Question-3: What is event delegation in the DOM?
+                    </h3>
+                    <div class="border-dashed border-b-2"></div>
+                    <div class="p-4 text-lg">
+                        Event delegation is a technique in the DOM where a
+                        parent element handles events for its child elements
+                        using event bubbling. Instead of adding event listeners
+                        to multiple child elements, a single listener is added
+                        to the parent, improving performance. This is useful for
+                        dynamically added elements.
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl">
+                    <h3 class="p-4 font-bold text-black text-xl">
+                        Question-4: What is event bubbling in the DOM?
+                    </h3>
+                    <div class="border-dashed border-b-2"></div>
+                    <div class="p-4 text-lg">
+                        Event bubbling is a process in the DOM where an event first triggers on a specific target element and then propagates upward to its parent elements. It works by default, making it useful for event delegation. The bubbling can be stopped using 'event.stopPropagation()'.
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl">
+                    <h3 class="p-4 font-bold text-black text-xl">
+                        Question-5: How do you create, add, and remove elements using JavaScript?
+                    </h3>
+                    <div class="border-dashed border-b-2"></div>
+                    <div class="p-4 text-lg">
+                        <dl>
+                            <dt class="font-bold">Create an element</dt>
+                            <dd class="ml-4">const newElement = document.createElement('div');</dd>
+                            <dt class="font-bold">Add the element to the DOM</dt>
+                            <dd class="ml-4">parentElement.appendChild(newElement);</dd>
+                            <dt class="font-bold">Remove the element from the DOM</dt>
+                            <dd class="ml-4">parentElement.removeChild(newElement);</dd>
+                        </dl>
+                        
+                    </div>
+                </div>
             </section>
         </main>
         <script src="./script/discovery.js"></script>

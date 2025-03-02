@@ -9,7 +9,14 @@
             rel="stylesheet"
             type="text/css" />
         <script src="https://cdn.tailwindcss.com"></script>
-       <link rel="stylesheet" href="popins-font.css">
+        <link rel="stylesheet" href="popins-font.css" />
+        <style>
+            .weekday-style {
+                color: rgb(0, 48, 60);
+                font-size: 22px;
+                font-weight: normal;
+            }
+        </style>
     </head>
     <body id="bg-color" class="bg-[#f4f7ff] py-6">
         <header class="w-11/12 mx-auto bg-white p-6 mb-6 rounded-2xl">
@@ -25,29 +32,36 @@
                     <div
                         class="flex items-center bg-[#f4f7ff] py-2 px-4 rounded-full gap-6 mr-11">
                         <img src="./assets/checkbox.png" alt="" />
-                        <h3 class="font-bold text-[32px] text-black" id="added-task">23</h3>
+                        <h3
+                            class="font-bold text-[32px] text-black"
+                            id="added-task">
+                            23
+                        </h3>
                     </div>
                     <img id="theme-btn" src="./assets/theme-btn.png" alt="" />
                 </div>
             </div>
         </header>
         <main class="w-11/12 mx-auto">
-            <section class="flex gap-6">
-                <section class="bg-white p-6 w-3/4 rounded-xl">
+            <section class="lg:flex gap-6">
+                <section class="bg-white p-6 w-full lg:w-3/4 rounded-xl">
                     <div
-                        class="flex justify-between items-center border-b-2 border-dashed pb-6 mb-6">
+                        class="md:flex justify-between items-center border-b-2 border-dashed pb-6 mb-6 w-full">
                         <div
-                            class="flex items-center p-4 bg-[#f4f7ff] rounded-xl">
+                            class="flex items-center p-4 bg-[#f4f7ff] rounded-xl w-full md:w-1/4">
                             <div class="mr-4 bg-white rounded-full p-5">
                                 <img src="./assets/checkbox.png" alt="" />
                             </div>
                             <div class="">
                                 <h3>Task Assigned</h3>
-                                <h3 class="font-bold text-[32px]" >0<span id="task">6</span></h3>
+                                <h3 class="font-bold text-[32px]">
+                                    0<span id="task">6</span>
+                                </h3>
                             </div>
                         </div>
-                        <div id="discover-today"
-                            class="cursor-pointer flex items-center mx-6 bg-gradient-to-r from-[#3752fd] to-[#9ba8f8] px-6 py-3 rounded-xl">
+                        <div
+                            id="discover-today"
+                            class="cursor-pointer flex items-center md:mx-6 my-3 md:my-0 bg-gradient-to-r from-[#3752fd] to-[#9ba8f8] px-6 py-3 rounded-xl w-full md:w-1/2">
                             <img src="./assets/board.png" alt="" />
                             <h3
                                 class="capitalize font-medium text-[22px] text-white ml-3">
@@ -55,152 +69,206 @@
                             </h3>
                         </div>
                         <div
-                            class="flex items-center p-4 bg-[#f4f7ff] rounded-xl">
-                            <div class="bg-white rounded-full p-5">
-                                <img src="./assets/calender.png" alt="" />
+                            class="flex items-center p-4 bg-[#f4f7ff] rounded-xl w-full md:w-1/4">
+                            <div class="bg-white rounded-full p-4">
+                                <img
+                                    width="35px"
+                                    src="./assets/calender.png"
+                                    alt="" />
                             </div>
-                            <h3 id="date" class="ml-4">
-                                Wed,<br />
-                                <span class="font-bold text-[22px]"
-                                    >July 29 2025</span
-                                >
+                            <h3 id="date" class="ml-4 font-bold text-[22px]">
+                                <span class="weekday-style">Wed,</span> July 29 2025
                             </h3>
                         </div>
                     </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
                         <!-- card 1  -->
-                        <div class="bg-[#f4f7ff] rounded-2xl ">
-                            <div id="card-1" class="p-5 text-[#00303c] space-y-3">
-                                <p class="bg-white w-fit px-4 py-2 rounded-lg">Shopcase</p>
-                                <h3 class="font-medium text-2xl card-title">Fix Mobile Button Issue</h3>
-                                <p class="bg-white p-4 text-black rounded-lg">
-                                    Fix the mobile button issue by ensuring proper responsiveness, adding correct event listeners, and debugging any CSS or JavaScript conflicts.
+                        <div class="bg-[#f4f7ff] rounded-2xl">
+                            <div
+                                id="card-1"
+                                class="p-5 text-[#00303c] space-y-3">
+                                <p class="bg-white w-fit px-4 py-2 rounded-lg">
+                                    Shopcase
                                 </p>
-                                <div class="border-dashed border-t-2 my-3">
-
-                                </div>
+                                <h3 class="font-medium text-2xl card-title">
+                                    Fix Mobile Button Issue
+                                </h3>
+                                <p class="bg-white p-4 text-black rounded-lg">
+                                    Fix the mobile button issue by ensuring
+                                    proper responsiveness, adding correct event
+                                    listeners, and debugging ........
+                                </p>
                                 <div
-                                    class="card-actions flex justify-between ">
+                                    class="border-dashed border-t-2 my-3"></div>
+                                <div class="card-actions flex justify-between">
                                     <div class="">
                                         <p>Deadline</p>
-                                        <h4 class="font-medium ">21 March 2025</h4>
+                                        <h4 class="font-medium">
+                                            21 March 2025
+                                        </h4>
                                     </div>
-                                    <button id="card-btn-1" class="btn card-btn hover:bg-[#3752fd] hover:text-white text-[#3752fd] bg-transparent border-current text-lg font-semibold">
+                                    <button
+                                        id="card-btn-1"
+                                        class="btn card-btn hover:bg-[#3752fd] hover:text-white text-[#3752fd] bg-transparent border-current text-lg font-semibold">
                                         Completed
                                     </button>
                                 </div>
                             </div>
                         </div>
                         <!-- card 2  -->
-                        <div class=" bg-[#f4f7ff] rounded-2xl ">
-                            <div id="card-2" class="p-5 text-[#00303c] space-y-3">
-                                <p class="bg-white w-fit px-4 py-2 rounded-lg">CloudSync</p>
-                                <h3 class="font-medium text-2xl card-title">Add Dark Mode</h3>
-                                <p class="bg-white p-4 text-black rounded-lg">
-                                    Implement dark mode using CSS variables, a toggle button, and JavaScript to store user preferences in local storage for persistence.
+                        <div class="bg-[#f4f7ff] rounded-2xl">
+                            <div
+                                id="card-2"
+                                class="p-5 text-[#00303c] space-y-3">
+                                <p class="bg-white w-fit px-4 py-2 rounded-lg">
+                                    CloudSync
                                 </p>
-                                <div class="border-dashed border-t-2 my-3">
-
-                                </div>
+                                <h3 class="font-medium text-2xl card-title">
+                                    Add Dark Mode
+                                </h3>
+                                <p class="bg-white p-4 text-black rounded-lg">
+                                    Implement dark mode using CSS variables, a
+                                    toggle button, and JavaScript to store user
+                                    preferences in ...........
+                                </p>
                                 <div
-                                    class="card-actions flex justify-between ">
+                                    class="border-dashed border-t-2 my-3"></div>
+                                <div class="card-actions flex justify-between">
                                     <div class="">
                                         <p>Deadline</p>
-                                        <h4 class="font-medium ">21 March 2025</h4>
+                                        <h4 class="font-medium">29 May 2025</h4>
                                     </div>
-                                    <button id="card-btn-2" class="btn card-btn hover:bg-[#3752fd]  hover:text-white text-[#3752fd] bg-transparent border-current text-lg font-medium">
+                                    <button
+                                        id="card-btn-2"
+                                        class="btn card-btn hover:bg-[#3752fd] hover:text-white text-[#3752fd] bg-transparent border-current text-lg font-medium">
                                         Completed
                                     </button>
                                 </div>
                             </div>
                         </div>
                         <!-- card 3  -->
-                        <div class=" bg-[#f4f7ff] rounded-2xl ">
-                            <div id="card-3" class="p-5 text-[#00303c] space-y-3">
-                                <p class="bg-white w-fit px-4 py-2 rounded-lg">SwiftPay</p>
-                                <h3 class="font-medium text-2xl card-title">Optimize  Home page </h3>
-                                <p class="bg-white p-4 text-black rounded-lg">
-                                    Optimize the homepage by improving load speed, minimizing HTTP requests, optimizing images, using lazy loading, and reducing unnecessary JavaScript and CSS files.
+                        <div class="bg-[#f4f7ff] rounded-2xl">
+                            <div
+                                id="card-3"
+                                class="p-5 text-[#00303c] space-y-3">
+                                <p class="bg-white w-fit px-4 py-2 rounded-lg">
+                                    SwiftPay
                                 </p>
-                                <div class="border-dashed border-t-2 my-3">
-
-                                </div>
+                                <h3 class="font-medium text-2xl card-title">
+                                    Optimize Home page 
+                                </h3>
+                                <p class="bg-white p-4 text-black rounded-lg">
+                                    Optimize the homepage by improving load
+                                    speed, minimizing HTTP requests, optimizing
+                                    .............
+                                </p>
                                 <div
-                                    class="card-actions flex justify-between ">
+                                    class="border-dashed border-t-2 my-3"></div>
+                                <div class="card-actions flex justify-between">
                                     <div class="">
                                         <p>Deadline</p>
-                                        <h4 class="font-medium ">21 March 2025</h4>
+                                        <h4 class="font-medium">12 May 2026</h4>
                                     </div>
-                                    <button id="card-btn-3" class="btn card-btn hover:bg-[#3752fd] hover:text-white text-[#3752fd] bg-transparent border-current text-lg font-medium">
+                                    <button
+                                        id="card-btn-3"
+                                        class="btn card-btn hover:bg-[#3752fd] hover:text-white text-[#3752fd] bg-transparent border-current text-lg font-medium">
                                         Completed
                                     </button>
                                 </div>
                             </div>
                         </div>
                         <!-- card 4 -->
-                        <div class=" bg-[#f4f7ff] rounded-2xl ">
-                            <div id="card-4" class="p-5 text-[#00303c] space-y-3">
-                                <p class="bg-white w-fit px-4 py-2 rounded-lg">Meta</p>
-                                <h3 class="font-medium text-2xl card-title">Add new emoji 🤲</h3>
-                                <p class="bg-white p-4 text-black rounded-lg">
-                                    To add the new emoji 🤲, simply use the Unicode `\U0001F932` or copy-paste the emoji directly into your content.
+                        <div class="bg-[#f4f7ff] rounded-2xl">
+                            <div
+                                id="card-4"
+                                class="p-5 text-[#00303c] space-y-3">
+                                <p class="bg-white w-fit px-4 py-2 rounded-lg">
+                                    Meta
                                 </p>
-                                <div class="border-dashed border-t-2 my-3">
-
-                                </div>
+                                <h3 class="font-medium text-2xl card-title">
+                                    Add new emoji 🤲
+                                </h3>
+                                <p class="bg-white p-4 text-black rounded-lg">
+                                    To add the new emoji 🤲, simply use the
+                                    Unicode `\U0001F932` or copy-paste the emoji
+                                    directly into ................
+                                </p>
                                 <div
-                                    class="card-actions flex justify-between ">
+                                    class="border-dashed border-t-2 my-3"></div>
+                                <div class="card-actions flex justify-between">
                                     <div class="">
                                         <p>Deadline</p>
-                                        <h4 class="font-medium ">21 March 2025</h4>
+                                        <h4 class="font-medium">
+                                            20 June 2025
+                                        </h4>
                                     </div>
-                                    <button id="card-btn-4" class="btn card-btn hover:bg-[#3752fd] hover:text-white text-[#3752fd] bg-transparent border-current text-lg font-medium">
+                                    <button
+                                        id="card-btn-4"
+                                        class="btn card-btn hover:bg-[#3752fd] hover:text-white text-[#3752fd] bg-transparent border-current text-lg font-medium">
                                         Completed
                                     </button>
                                 </div>
                             </div>
                         </div>
                         <!-- card 5 -->
-                        <div class=" bg-[#f4f7ff] rounded-2xl ">
-                            <div id="card-5" class="p-5 text-[#00303c] space-y-3">
-                                <p class="bg-white w-fit px-4 py-2 rounded-lg">Google LLC</p>
-                                <h3 class="font-medium text-2xl card-title">Integrate OpenAI API </h3>
-                                <p class="bg-white p-4 text-black rounded-lg">
-                                    Integrate the OpenAI API by obtaining an API key, installing the OpenAI package, and making requests using JavaScript or Python for responses.
+                        <div class="bg-[#f4f7ff] rounded-2xl">
+                            <div
+                                id="card-5"
+                                class="p-5 text-[#00303c] space-y-3">
+                                <p class="bg-white w-fit px-4 py-2 rounded-lg">
+                                    Google LLC
                                 </p>
-                                <div class="border-dashed border-t-2 my-3">
-
-                                </div>
+                                <h3 class="font-medium text-2xl card-title">
+                                    Integrate OpenAI API
+                                </h3>
+                                <p class="bg-white p-4 text-black rounded-lg">
+                                    Integrate the OpenAI API by obtaining an API
+                                    key, installing the OpenAI package, and
+                                    making requests ..................
+                                </p>
                                 <div
-                                    class="card-actions flex justify-between ">
+                                    class="border-dashed border-t-2 my-3"></div>
+                                <div class="card-actions flex justify-between">
                                     <div class="">
                                         <p>Deadline</p>
-                                        <h4 class="font-medium ">21 March 2025</h4>
+                                        <h4 class="font-medium">
+                                            21 July 2025
+                                        </h4>
                                     </div>
-                                    <button id="card-btn-5" class="btn card-btn hover:bg-[#3752fd] hover:text-white text-[#3752fd] bg-transparent border-current text-lg font-medium">
+                                    <button
+                                        id="card-btn-5"
+                                        class="btn card-btn hover:bg-[#3752fd] hover:text-white text-[#3752fd] bg-transparent border-current text-lg font-medium">
                                         Completed
                                     </button>
                                 </div>
                             </div>
                         </div>
                         <!-- card 6 -->
-                        <div class=" bg-[#f4f7ff] rounded-2xl ">
-                            <div id="card-6" class="p-5 text-[#00303c] space-y-3">
-                                <p class="bg-white w-fit px-4 py-2 rounded-lg">Glassdoar</p>
-                                <h3 class="font-medium text-2xl card-title">Improve Job searching </h3>
-                                <p class="bg-white p-4 text-black rounded-lg">
-                                    Improve job searching by optimizing your resume, networking on platforms like LinkedIn, using job boards, and tailoring applications to specific roles.
+                        <div class="bg-[#f4f7ff] rounded-2xl">
+                            <div
+                                id="card-6"
+                                class="p-5 text-[#00303c] space-y-3">
+                                <p class="bg-white w-fit px-4 py-2 rounded-lg">
+                                    Glassdoar
                                 </p>
-                                <div class="border-dashed border-t-2 my-3">
-
-                                </div>
+                                <h3 class="font-medium text-2xl card-title">
+                                    Improve Job searching
+                                </h3>
+                                <p class="bg-white p-4 text-black rounded-lg">
+                                    Improve job searching by optimizing your
+                                    resume, networking on platforms like
+                                    LinkedIn, .................
+                                </p>
                                 <div
-                                    class="card-actions flex justify-between ">
+                                    class="border-dashed border-t-2 my-3"></div>
+                                <div class="card-actions flex justify-between">
                                     <div class="">
                                         <p>Deadline</p>
-                                        <h4 class="font-medium ">21 March 2025</h4>
+                                        <h4 class="font-medium">31 May 2025</h4>
                                     </div>
-                                    <button id="card-btn-6" class="btn card-btn hover:bg-[#3752fd] hover:text-white text-[#3752fd] bg-transparent border-current text-lg font-medium">
+                                    <button
+                                        id="card-btn-6"
+                                        class="btn card-btn hover:bg-[#3752fd] hover:text-white text-[#3752fd] bg-transparent border-current text-lg font-medium">
                                         Completed
                                     </button>
                                 </div>
@@ -208,7 +276,7 @@
                         </div>
                     </div>
                 </section>
-                <aside class="bg-white p-10 w-1/4 rounded-xl">
+                <aside class="bg-white p-10 w-full lg:w-1/4 rounded-xl">
                     <div class="border-b-2 border-dashed text-center mb-3">
                         <div class="flex justify-center items-center mb-3">
                             <img class="" src="./assets/activity.png" alt="" />
@@ -216,13 +284,13 @@
                                 Activity Log
                             </h3>
                         </div>
-                        <button id="clear-history" class="btn hover:bg-[#3752fd] hover:text-white text-[#3752fd] bg-transparent border-current text-lg font-medium mb-4">
-                                        Clear History
-                                    </button>
+                        <button
+                            id="clear-history"
+                            class="btn hover:bg-[#3752fd] hover:text-white text-[#3752fd] bg-transparent border-current text-lg font-medium mb-4">
+                            Clear History
+                        </button>
                     </div>
-                    <div id="history-title">
-
-                    </div>
+                    <div id="history-title"></div>
                 </aside>
             </section>
         </main>
