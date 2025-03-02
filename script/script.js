@@ -16,9 +16,8 @@ function formatDate(date) {
 
     let dateParts = formatedDate.split(',');
     if (dateParts.length > 1) {
-         dateParts[0] = `<span class='weekday-style'>${dateParts[0]}</span>`; 
-         formatedDate =
-             `${dateParts[0]} ,<br> ${dateParts[1]} ${dateParts[2]}`;
+        dateParts[0] = `<span class='weekday-style'>${dateParts[0]}</span>`;
+        formatedDate = `${dateParts[0]} ,<br> ${dateParts[1]} ${dateParts[2]}`;
     }
     // console.log(formatedDate);
 
@@ -27,15 +26,15 @@ function formatDate(date) {
 const date = new Date();
 const formatedDate = formatDate(date);
 
-console.log(formatedDate);
+// console.log(formatedDate);
 
 const currentDate = document.getElementById('date');
 currentDate.innerHTML = formatedDate;
 currentDate.classList.add('font-bold', 'text-[22px]');
 
-const cardButtons = document.querySelectorAll('.card-btn');
 let clickCount = 0;
 
+const cardButtons = document.querySelectorAll('.card-btn');
 for (let i = 0; i < cardButtons.length; i++) {
     const button = cardButtons[i];
 
@@ -43,6 +42,7 @@ for (let i = 0; i < cardButtons.length; i++) {
         const cardId = button.id.replace('card-btn-', 'card-');
         const card = document.getElementById(cardId);
         // console.log(card);
+        // console.log(cardId);
 
         const taskElement = document.getElementById('task');
         const taskAddedElement = document.getElementById('added-task');
@@ -50,15 +50,15 @@ for (let i = 0; i < cardButtons.length; i++) {
         let taskAdded = Number(taskAddedElement.innerText);
 
         if (task > 0) {
-            console.log((taskElement.innerText = task - 1));
-            console.log((taskAddedElement.innerText = taskAdded + 1));
+            taskElement.innerText = task - 1;
+            taskAddedElement.innerText = taskAdded + 1;
         }
 
         if (card) {
             alert('Board updated Successfully');
 
             const cardTitle = card.querySelector('.card-title').innerText;
-            console.log(cardTitle);
+            // console.log(cardTitle);
 
             const time = new Date().toLocaleTimeString();
 
@@ -71,6 +71,7 @@ for (let i = 0; i < cardButtons.length; i++) {
         }
 
         button.setAttribute('disabled', true);
+
         clickCount++;
         if (clickCount === cardButtons.length) {
             alert('Congrates!!! You have completed all the current task');
@@ -87,7 +88,7 @@ document.getElementById('theme-btn').addEventListener('click', function () {
 
 document
     .getElementById('discover-today')
-    .addEventListener('click', function (event) {
-        event.preventDefault();
+    .addEventListener('click', function () {
+        // event.preventDefault();
         window.location.href = './discovery.html';
     });
