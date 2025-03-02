@@ -66,7 +66,7 @@ for (let i = 0; i < cardButtons.length; i++) {
             historyTitle.style.display = 'block';
             const p = document.createElement('p');
             p.classList.add('bg-[#f4f7ff]', 'p-3', 'mb-3', 'rounded-lg');
-            p.innerText = `You have Completed ${cardTitle} at ${time}`;
+            p.innerText = `You have Completed the Task ${cardTitle} at ${time}`;
             historyTitle.appendChild(p);
         }
 
