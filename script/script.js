@@ -87,6 +87,7 @@ document.getElementById('theme-btn').addEventListener('click', function () {
 
 document
     .getElementById('discover-today')
-    .addEventListener('click', function () {
+    .addEventListener('click', function (event) {
+        event.preventDefault();
         window.location.href = './discovery.html';
     });
